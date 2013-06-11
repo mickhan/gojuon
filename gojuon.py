@@ -20,6 +20,42 @@ gojuon = [
     ("ku", "く"),
     ("ke", "け"),
     ("ko", "こ"),
+    ("sa", "さ"),
+    ("shi", "し"),
+    ("su", "す"),
+    ("se", "せ"),
+    ("so", "そ"),
+    ("ta", "た"),
+    ("chi", "ち"),
+    ("tsu", "つ"),
+    ("te", "て"),
+    ("to", "と"),
+    ("na", "な"),
+    ("ni", "に"),
+    ("nu", "ぬ"),
+    ("ne", "ね"),
+    ("no", "の"),
+    ("ha", "は"),
+    ("hi", "ひ"),
+    ("fu", "ふ"),
+    ("he", "へ"),
+    ("ho", "ほ"),
+    ("ma", "ま"),
+    ("mi", "み"),
+    ("mu", "む"),
+    ("me", "め"),
+    ("mo", "も"),
+    ("ya", "や"),
+    ("yu", "ゆ"),
+    ("yo", "よ"),
+    ("ra", "ら"),
+    ("ri", "り"),
+    ("ru", "る"),
+    ("re", "れ"),
+    ("ro", "ろ"),
+    ("wa", "わ"),
+    ("wo", "を"),
+    ("n", "ん"),
 ]
 
 
@@ -46,9 +82,8 @@ def main():
     step 2: 随机显示所有平假名/罗马音/读音，在命令行输入正确平假名才能进入下一个
     step 3: 随机显示所有平假名/读音，在命令行输入正确平假名才能进入下一个
     step 4: 随机显示所有罗马音/读音，在命令行输入正确平假名才能进入下一个
-    step 5: 随机显示所有罗马音，在命令行输入正确平假名才能进入下一个
-    step 6: 随机显示所有平假名，在命令行输入正确平假名才能进入下一个
-    step 7: 随机显示所有读音，在命令行输入正确平假名才能进入下一个
+    step 5: 随机显示所有平假名，在命令行输入正确平假名才能进入下一个
+    step 6: 随机显示所有读音，在命令行输入正确平假名才能进入下一个
     '''
     #step 1
     for item in gojuon:
@@ -68,13 +103,9 @@ def main():
             pass
     #step 5
     for item in sample(gojuon, len(gojuon)):
-        while not one_item(item, char=False, pron=False):
-            pass
-    #step 6
-    for item in sample(gojuon, len(gojuon)):
         while not one_item(item, rome=False, pron=False):
             pass
-    #step 7
+    #step 6 
     for item in sample(gojuon, len(gojuon)):
         while not one_item(item, char=False, rome=False):
             pass
